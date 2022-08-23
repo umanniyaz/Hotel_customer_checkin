@@ -1,0 +1,25 @@
+1. Write about any difficult problem that you solved. (According to us difficult - is
+something which 90% of people would have only 10% probability in getting a
+similarly good solution).
+Ans: Problem Statement: Fraud Detection in Facial Recognition system/ Unified Embedding for Facenet
+
+- In Facial Recognition  systems  frauds make the system vulnerable in form of replay attacks,print attacks or video attacks.
+- Developing a Fraud Detection model to tackle the such problem.
+- Developed a Fraud Detection model based on MobileNetv2 architecture as a classification model.
+- Challenge being using the model,as face recognition was deployed in production
+- Offine running of h5 model by deploying on AWS Lambda where each attendance frame dumped to s3 bucket,Lambda trigger would invoke the model.
+- Checking different  architecture resnet 50 and xception by improving results and tuning hyperparameters and precisoon-thresholds curves
+- Employing h5 model to tfjs and utilizing on FrontEnd in JS.
+- Facenet embeddings issue face similarity issue,tackling problem by reducing the euclidean distance via triplet loss layer(retraining and tuning) and also face clustering.
+
+2. Explain back propagation and tell us how you handle a dataset if 4 out of 30
+parameters have null values more than 40 percentage.
+Ans:
+1. Backpropagation is used in training gradient based algorithms. We have a cost function and based on first derivatives gradient can be 
+optimized.It is the process of updating weights by using derivatives of weights w.r.t
+the cost function, this process is done to the reduce the cost function untill a minimum value is obtained.
+While training the nn, while updating the weights its done at each epoch in backend,in batches and mini batches(gradient descent)
+This process works in such a way,such that weights adjust in a way to improve the performance of the model
+2. We can handle missing values by imputation-measures of central tendency based on missing value behaviour.Also,in case of actegorical missing values,
+we can fill them by the highest neighbourhood element or value or simply taking other features as independent and predicting the category of that or using
+KNN
